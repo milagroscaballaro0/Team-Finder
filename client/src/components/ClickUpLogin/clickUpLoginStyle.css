@@ -1,0 +1,21 @@
+.clickup-btn {
+  background: linear-gradient(135deg, #7B68EE 0%, #6A5ACD 100%);
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(123, 104, 238, 0.3);
+}
+
+.clickup-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(123, 104, 238, 0.5);
+}
+
+.clickup-btn:active {
+  transform: scale(0.98);
+}

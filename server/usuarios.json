@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "nombre": "mili",
+    "email": "milagros.caballaro@anima.edu.uy",
+    "password": "hjggdj",
+    "rol": "usuario",
+    "activo": true
+  },
+  {
+    "id": 2,
+    "nombre": "hola",
+    "email": "hola@gmail.com",
+    "password": "hola",
+    "rol": "usuario",
+    "activo": true
+  },
+  {
+    "id": 3,
+    "nombre": "ana",
+    "email": "ana@gmail.com",
+    "password": "jsgjhsg",
+    "rol": "usuario",
+    "activo": true
+  }
+]

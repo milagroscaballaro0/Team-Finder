@@ -1,0 +1,404 @@
+* {
+  font-family: Arial, sans-serif;
+}
+
+.planes-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.hero-section {
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  padding: 100px 20px 150px;
+  position: relative;
+  overflow: hidden;
+  min-height: 400px;
+  
+}
+
+.cloud-bronce,
+.cloud-plata,
+.cloud-oro {
+  position: absolute;
+  width: 200px;
+  height: 120px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: float 4s ease-in-out infinite;
+  filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.15));
+}
+
+.cloud-bronce {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120"><ellipse cx="50" cy="70" rx="45" ry="35" fill="white"/><ellipse cx="100" cy="60" rx="55" ry="45" fill="white"/><ellipse cx="150" cy="70" rx="45" ry="35" fill="white"/><text x="100" y="75" font-family="Arial" font-size="28" font-weight="bold" fill="%23cd7f32" text-anchor="middle">Bronce</text></svg>');
+  top: 50px;
+  left: 8%;
+  animation-delay: 0s;
+}
+
+.cloud-plata {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120"><ellipse cx="50" cy="70" rx="45" ry="35" fill="white"/><ellipse cx="100" cy="60" rx="55" ry="45" fill="white"/><ellipse cx="150" cy="70" rx="45" ry="35" fill="white"/><text x="100" y="75" font-family="Arial" font-size="28" font-weight="bold" fill="%23c0c0c0" text-anchor="middle">Plata</text></svg>');
+  top: 30px;
+  right: 12%;
+  animation-delay: 1.5s;
+  width: 180px;
+}
+
+.cloud-oro {
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 120"><ellipse cx="50" cy="70" rx="45" ry="35" fill="white"/><ellipse cx="100" cy="60" rx="55" ry="45" fill="white"/><ellipse cx="150" cy="70" rx="45" ry="35" fill="white"/><text x="100" y="75" font-family="Arial" font-size="28" font-weight="bold" fill="%23ffd700" text-anchor="middle">Oro</text></svg>');
+  bottom: 20px;
+  left: 35%;
+  transform: translateX(-50%);
+  animation-delay: 3s;
+  width: 190px;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes float-oro {
+  0% { transform: translate(-50%, 0px); }
+  50% { transform: translate(-50%, -15px); }
+  100% { transform: translate(-50%, 0px); }
+}
+
+.cloud-oro {
+  animation: float-oro 4s ease-in-out infinite;
+}
+
+@keyframes highlightPulse {
+  0% {
+    transform: translateY(-5px) scale(1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    transform: translateY(-5px) scale(1.08);
+    box-shadow: 0 15px 40px rgba(74, 144, 226, 0.4);
+  }
+  100% {
+    transform: translateY(-5px) scale(1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  }
+}
+
+.plan-highlight-animation {
+  animation: highlightPulse 1s ease-in-out 2;
+}
+
+.cloud-bronce:hover,
+.cloud-plata:hover,
+.cloud-oro:hover {
+  transform: scale(1.1) translateY(-5px);
+  filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.3));
+  transition: all 0.3s ease;
+}
+
+.cloud-bronce:active,
+.cloud-plata:active,
+.cloud-oro:active {
+  transform: scale(0.95) translateY(0px);
+}
+
+.hero-title {
+  max-width: 1000px;
+  margin: 80px auto 0;
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: normal;
+  color: #333;
+  line-height: 1.3;
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title .highlight {
+  color: white;
+  font-weight: bold;
+}
+
+.hero-subtitle {
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
+  max-width: 1000px;
+  margin: 15px auto 0;
+  line-height: 1.6;
+  position: relative;
+  z-index: 10;
+}
+
+.motivational-section {
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  padding: 100px 20px 150px;
+  position: relative;
+  overflow: hidden;
+  min-height: 3cm;
+}
+
+.motivational-section p {
+  text-align: center;
+  color: #333;
+  font-size: 2rem;
+  max-width: 1000px;
+  margin: 15px auto 0;
+  line-height: 1.6;
+  position: relative;
+  z-index: 10;
+}
+
+.planes-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.planes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+  transition: all 0.5s ease;
+}
+
+.plan-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s ease; 
+  position: relative;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.highlight {
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  color: white;
+  transform: scale(1.05);
+}
+
+.plan-card.dark {
+  background: #333;
+  color: white;
+}
+
+.plan-card.light {
+  border: 2px solid #4A90E2;
+}
+
+.plan-card.center-plan {
+  transform: scale(1.08) translateY(-5px);
+  box-shadow: 0 15px 40px rgba(74, 144, 226, 0.3);
+  z-index: 5;
+}
+
+.plan-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.plan-price {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 30px 0;
+}
+
+.plan-features li {
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+}
+
+.plan-card.highlight .plan-features li,
+.plan-card.dark .plan-features li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.plan-features li::before {
+  content: "✓";
+  margin-right: 10px;
+  color: #28a745;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.plan-button {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+.plan-button.current {
+  background: #6c757d;
+  color: white;
+}
+
+.plan-button.upgrade {
+  background: #4A90E2;
+  color: white;
+}
+
+.plan-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.motivational-section {
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  padding: 60px 20px;
+  text-align: center;
+  color: white;
+}
+
+.motivational-text {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.8rem;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.free-test-section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.free-test-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.free-test-description {
+  padding: 20px;
+}
+
+.free-test-description h2 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.free-test-description p {
+  font-size: 1.4rem;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.8;
+}
+
+.planes-footer {
+  background: linear-gradient(135deg, #357ABD 0%, #2a5f8f 100%);
+  padding: 60px 20px 30px;
+  color: white;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer-section h3 {
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: white;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  font-size: 1.5rem;
+}
+
+.social-icons a {
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .planes-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .plan-card.highlight {
+    transform: scale(1);
+  }
+  
+  .free-test-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .cloud-bronce,
+  .cloud-plata,
+  .cloud-oro {
+    width: 150px;
+    height: 90px;
+  }
+  
+  .cloud-bronce {
+    left: 5%;
+    top: 30px;
+  }
+  
+  .cloud-plata {
+    right: 5%;
+  }
+}

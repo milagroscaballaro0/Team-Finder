@@ -1,0 +1,468 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+.about-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-top: 80px;
+}
+
+.about-hero {
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  padding: 100px 20px;
+  text-align: center;
+  color: white;
+  margin-top: -80px;
+}
+
+.about-hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.about-description {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: justify;
+}
+
+.team-carousel-section {
+  padding: 80px 20px;
+  background: white;
+  text-align: center;
+}
+
+.team-carousel-section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #333;
+}
+
+.carousel-container {
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.carousel-track {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-card {
+  position: absolute;
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  width: 300px;
+  opacity: 0;
+  transform: translateX(0) scale(0.8);
+  pointer-events: none;
+}
+
+.carousel-card.active {
+  opacity: 1;
+  transform: translateX(0) scale(1.1);
+  z-index: 3;
+  box-shadow: 0 15px 40px rgba(74, 144, 226, 0.3);
+  pointer-events: all;
+}
+
+.carousel-card.prev {
+  opacity: 0.6;
+  transform: translateX(-350px) scale(0.85);
+  z-index: 2;
+  pointer-events: all;
+}
+
+.carousel-card.next {
+  opacity: 0.6;
+  transform: translateX(350px) scale(0.85);
+  z-index: 2;
+  pointer-events: all;
+}
+
+.team-photo-carousel {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  margin: 0 auto 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.team-info {
+  text-align: center;
+}
+
+.team-name-carousel {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.team-role-carousel {
+  color: #666;
+  font-size: 1.1rem;
+}
+
+.team-carousel {
+  width: 100%;
+  overflow: hidden;
+  padding: 40px 0;
+  background: white;
+}
+
+.team-carousel-track {
+  display: flex;
+  gap: 30px;
+  width: max-content;
+  animation: scroll 40s linear infinite; 
+}
+
+.team-card {
+  min-width: 280px; 
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  color: white;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.team-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.team-card {
+  min-width: 280px;
+  background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+  text-align: center;
+  color: white;
+  width: 260px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.team-photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  font-size: 2rem;
+  cursor: pointer;
+  z-index: 10;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 15px rgba(74, 144, 226, 0.4);
+}
+
+.carousel-btn:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 6px 20px rgba(74, 144, 226, 0.6);
+}
+
+.team-description {
+  max-width: 220px;
+  word-wrap: break-word; 
+  white-space: normal; 
+  margin: 0 auto;  
+  text-align: center;
+}
+
+.carousel-btn.next {
+  right: 10%;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ddd;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  background: #4A90E2;
+  transform: scale(1.3);
+}
+
+.dot:hover {
+  background: #357ABD;
+}
+
+@media (max-width: 1024px) {
+  .carousel-btn.prev {
+    left: 5%;
+  }
+
+  .carousel-btn.next {
+    right: 5%;
+  }
+
+  .carousel-card.prev {
+    transform: translateX(-280px) scale(0.85);
+  }
+
+  .carousel-card.next {
+    transform: translateX(280px) scale(0.85);
+  }
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-description {
+    font-size: 1rem;
+  }
+
+  .team-carousel-section h2 {
+    font-size: 2rem;
+  }
+
+  .carousel-card {
+    width: 250px;
+  }
+
+  .carousel-card.prev,
+  .carousel-card.next {
+    opacity: 0;
+    transform: translateX(0) scale(0.5);
+  }
+
+  .carousel-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+  }
+
+  .carousel-btn.prev {
+    left: 10px;
+  }
+
+  .carousel-btn.next {
+    right: 10px;
+  }
+}
+
+.contact-cta-section {
+  max-width: 100%;
+  margin: 6rem auto 4rem;
+  padding: 0 2rem;
+}
+
+.contact-cta-content {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 24px;
+  padding: 4rem 3rem;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(102, 126, 234, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.contact-cta-content::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.contact-cta-content::after {
+  content: '';
+  position: absolute;
+  bottom: -30%;
+  left: -10%;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.contact-cta-content > * {
+  position: relative;
+  z-index: 1;
+  
+}
+
+.contact-cta-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 2rem;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  animation: floatIcon 3s ease-in-out infinite;
+}
+
+@keyframes floatIcon {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.contact-cta-content h2 {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-cta-content p {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 1.2rem;
+  line-height: 1.8;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.contact-cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.25rem 3rem;
+  background: white;
+  color: #667eea;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.contact-cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  background: #f8f9ff;
+}
+
+.contact-cta-button:active {
+  transform: translateY(-1px);
+}
+
+.contact-cta-button svg {
+  transition: transform 0.3s ease;
+}
+
+.contact-cta-button:hover svg {
+  transform: translateX(3px);
+}
+
+@media (max-width: 768px) {
+  .contact-cta-section {
+    margin: 4rem auto 3rem;
+  }
+
+  .contact-cta-content {
+    padding: 3rem 2rem;
+    border-radius: 16px;
+  }
+
+  .contact-cta-content h2 {
+    font-size: 2rem;
+  }
+
+  .contact-cta-content p {
+    font-size: 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-cta-button {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    width: 100%;
+  }
+
+  .contact-cta-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .contact-cta-icon svg {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact-cta-content {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .contact-cta-content h2 {
+    font-size: 1.75rem;
+  }
+}

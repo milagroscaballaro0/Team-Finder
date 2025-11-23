@@ -1,0 +1,93 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String   @unique
+  password  String
+  role      String   @default("user") // AGREGAR
+  createdAt DateTime @default(now()) // AGREGAR
+  updatedAt DateTime @updatedAt // AGREGAR
+
+  // Relaciones
+  company      Company?
+  jobs         Job[]           @relation("JobPostedBy")
+  applications Application[]
+  testResult   UserTestResult?
+
+  @@map("users")
+}
+
+model Company {
+  id          Int      @id @default(autoincrement())
+  name        String
+  description String?
+  website     String?
+  location    String?
+  userId      Int      @unique
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  jobs        Job[]
+  createdAt   DateTime @default(now())
+
+  @@map("companies")
+}
+
+model Job {
+  id          Int     @id @default(autoincrement())
+  title       String
+  description String
+  location    String?
+  salary      String?
+  type        String? // "full-time", "part-time", "contract", "freelance"
+  category    String?
+  companyId   Int
+  company     Company @relation(fields: [companyId], references: [id], onDelete: Cascade)
+
+  // Relación con el usuario que publicó el trabajo
+  postedById Int
+  postedBy   User @relation("JobPostedBy", fields: [postedById], references: [id], onDelete: Cascade)
+
+  applications Application[]
+  createdAt    DateTime      @default(now())
+
+  @@map("jobs")
+}
+
+model Application {
+  id        Int      @id @default(autoincrement())
+  userId    Int
+  jobId     Int
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  job       Job      @relation(fields: [jobId], references: [id], onDelete: Cascade)
+  status    String   @default("pending") // "pending", "accepted", "rejected"
+  message   String?
+  createdAt DateTime @default(now())
+
+  @@unique([userId, jobId])
+  @@map("applications")
+}
+
+model UserTestResult {
+  id        Int      @id @default(autoincrement())
+  userId    Int      @unique
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  scores    Json // Almacenar todos los scores como JSON
+  topRole   String
+  createdAt DateTime @default(now())
+
+  @@map("user_test_results")
+}

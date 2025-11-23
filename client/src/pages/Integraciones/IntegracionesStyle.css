@@ -1,0 +1,236 @@
+.integraciones-container {
+  min-height: 100vh;
+  padding: 6rem 2rem 4rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.integraciones-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.integraciones-title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 1rem;
+}
+
+.integraciones-subtitle {
+  font-size: 1.2rem;
+  color: #5e6c84;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.integrations-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+}
+
+.integration-card {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.integration-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, transparent, currentColor, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.integration-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+}
+
+.integration-card:hover::before {
+  opacity: 1;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  background: #f4f5f7;
+}
+
+.card-title-section {
+  flex: 1;
+}
+
+.card-title-section h2 {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.5rem;
+  color: #172b4d;
+}
+
+.badge {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.badge.connected {
+  background: #e3fcef;
+  color: #006644;
+}
+
+.badge.pending {
+  background: #fff4e6;
+  color: #ff991f;
+}
+
+.badge.coming-soon {
+  background: #f0f1f3;
+  color: #5e6c84;
+}
+
+.card-description {
+  color: #5e6c84;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.trello-card::before { color: #0079bf; }
+.clickup-card::before { color: #7B68EE; }
+.slack-card::before { color: #4A154B; }
+.calendar-card::before { color: #4285F4; }
+.jira-card::before { color: #0052CC; }
+.github-card::before { color: #24292e; }
+
+.trello-section {
+  max-width: 1200px;
+  margin: 0 auto 4rem;
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cta-section {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cta-section h2 {
+  font-size: 2rem;
+  color: #172b4d;
+  margin-bottom: 1rem;
+}
+
+.cta-section p {
+  color: #5e6c84;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.cta-button {
+  padding: 1rem 2.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(102, 126, 234, 0.6);
+}
+
+@media (max-width: 768px) {
+  .integraciones-container {
+    padding: 5rem 1rem 2rem;
+  }
+
+  .integraciones-title {
+    font-size: 2rem;
+  }
+
+  .integraciones-subtitle {
+    font-size: 1rem;
+  }
+
+  .integrations-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .integration-card {
+    padding: 1.5rem;
+  }
+
+  .trello-section {
+    padding: 1.5rem;
+  }
+
+  .cta-section {
+    padding: 2rem 1.5rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-button {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .card-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-title-section h2 {
+    font-size: 1.25rem;
+  }
+}

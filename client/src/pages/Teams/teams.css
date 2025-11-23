@@ -1,0 +1,209 @@
+.teams-page {
+  min-height: 100vh;
+  background: #ffffff;
+}
+
+.teams-hero {
+  background: 
+    linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  color: #1e293b;
+  padding: 140px 0 80px;
+  text-align: center;
+  position: relative;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: 3.2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e293b;
+  line-height: 1.1;
+}
+
+.hero-content p {
+  font-size: 1.3rem;
+  color: #64748b;
+  margin-bottom: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 20px;
+  background: white;
+  border-radius: 16px;
+  border: 1px solid #f1f5f9;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  transition: all 0.3s ease;
+  min-width: 140px;
+}
+
+.stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-color: #e2e8f0;
+}
+
+.stat-number {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: #1e293b;
+}
+
+.stat-label {
+  font-size: 0.95rem;
+  color: #64748b;
+  font-weight: 500;
+}
+
+.teams-tabs-container {
+  background: white;
+  border-bottom: 1px solid #e2e8f0;
+  position: sticky;
+  top: 80px;
+  z-index: 90;
+  backdrop-filter: blur(10px);
+}
+
+.teams-tabs {
+  display: flex;
+  gap: 0;
+  background: white;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.tab-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: none;
+  border: none;
+  padding: 24px 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.tab-button:hover {
+  color: #334155;
+  background: #f8fafc;
+}
+
+.tab-button.active {
+  color: #1e293b;
+  border-bottom-color: #1e293b;
+  font-weight: 600;
+  background: #f8fafc;
+}
+
+.tab-icon {
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+.teams-content {
+  padding: 60px 0;
+  min-height: 600px;
+  background: #ffffff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.teams-content > .container > * {
+  animation: fadeInUp 0.5s ease-out;
+}
+
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 2.8rem;
+  }
+  
+  .hero-stats {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .teams-hero {
+    padding: 120px 0 50px;
+  }
+  
+  .hero-content h1 {
+    font-size: 2.3rem;
+  }
+  
+  .hero-content p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+  }
+  
+  .hero-stats {
+    gap: 20px;
+  }
+  
+  .stat {
+    min-width: 120px;
+    padding: 20px 15px;
+  }
+  
+  .stat-number {
+    font-size: 2rem;
+  }
+  
+  .teams-tabs {
+    flex-direction: column;
+  }
+  
+  .tab-button {
+    justify-content: center;
+    border-bottom: 1px solid #e2e8f0;
+    border-left: 2px solid transparent;
+    padding: 20px;
+  }
+  
+  .tab-button.active {
+    border-left-color: #1e293b;
+    border-bottom-color: #e2e8f0;
+  }
+}
