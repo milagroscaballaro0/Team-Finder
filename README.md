@@ -7,3 +7,21 @@ Formato: Aplicación web
 Tecnologías: React, Node.js, Prisma, APIs, JSON, JavaScript, HTML, CSS
 
 Herramientas de gestión: Linear, GitHub, Discord, diagramas PERT y Gantt
+
+
+<img width="459" height="372" alt="image" src="https://github.com/user-attachments/assets/7e814815-de7a-42a5-8f6f-0807f7415b88" />
+
+<img width="1169" height="635" alt="image" src="https://github.com/user-attachments/assets/56e70ff8-00f3-4ca9-84e9-e5c70dad3af1" />
+
+<img width="885" height="591" alt="image" src="https://github.com/user-attachments/assets/e74241dc-6995-48a0-af68-d643931082a2" />
+
+<img width="459" height="625" alt="image" src="https://github.com/user-attachments/assets/d9c406b2-4cdf-4acc-8c12-84756581da14" />
+
+<img width="457" height="541" alt="image" src="https://github.com/user-attachments/assets/c96e6fe0-abc6-4aed-be0e-8a43a48e94eb" />
+
+<img width="1300" height="555" alt="image" src="https://github.com/user-attachments/assets/d3860755-07b7-47c8-9a5b-cace73150cb0" />
+
+
+
+
+
