@@ -19,14 +19,13 @@ Herramientas de gestión: Linear, GitHub, Discord, diagramas PERT y Gantt
 
 <img width="457" height="541" alt="image" src="https://github.com/user-attachments/assets/c96e6fe0-abc6-4aed-be0e-8a43a48e94eb" />
 
+<img width="1300" height="555" alt="image" src="https://github.com/user-attachments/assets/d3860755-07b7-47c8-9a5b-cace73150cb0" />
+
 https://github.com/user-attachments/assets/1b3af327-904e-480c-83fa-92659fc1d185
 
-https://github.com/user-attachments/assets/648c304a-1a84-44f9-b28d-ba44d9150309
+https://github.com/user-attachments/assets/62274f7b-f99b-4818-a352-80383a9cc4ab
 
 
-
-
-<img width="1300" height="555" alt="image" src="https://github.com/user-attachments/assets/d3860755-07b7-47c8-9a5b-cace73150cb0" />
 
 
 
