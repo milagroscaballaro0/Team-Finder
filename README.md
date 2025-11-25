@@ -4,7 +4,7 @@ Team Finder es un proyecto diseñado para facilitar la creación de equipos de t
 
 Formato: Aplicación web
 
-Tecnologías: React, Node.js, Prisma, APIs, JSON, JavaScript, HTML, CSS
+Tecnologías: React, Node.js, Prisma, APIs, JavaScript, HTML, CSS
 
 Herramientas de gestión: Linear, GitHub, Discord, diagramas PERT y Gantt
 
@@ -18,6 +18,13 @@ Herramientas de gestión: Linear, GitHub, Discord, diagramas PERT y Gantt
 <img width="459" height="625" alt="image" src="https://github.com/user-attachments/assets/d9c406b2-4cdf-4acc-8c12-84756581da14" />
 
 <img width="457" height="541" alt="image" src="https://github.com/user-attachments/assets/c96e6fe0-abc6-4aed-be0e-8a43a48e94eb" />
+
+https://github.com/user-attachments/assets/1b3af327-904e-480c-83fa-92659fc1d185
+
+https://github.com/user-attachments/assets/648c304a-1a84-44f9-b28d-ba44d9150309
+
+
+
 
 <img width="1300" height="555" alt="image" src="https://github.com/user-attachments/assets/d3860755-07b7-47c8-9a5b-cace73150cb0" />
 
